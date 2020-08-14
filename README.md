@@ -1,4 +1,4 @@
-# Kali 2020.02 Fixer Script for setoolkit #
+# Kali 2020.02 Upgrade Script for setoolkit #
 
 In my work at the [VirginiaCyberRange](https://virginiacyberrange.org) I get to see a lot of weird stuff in our cloud based, security training system.. including problems our customers (cyber security instructors) run into doing pentesting classes and the like. One of the recent issues was this SET (social engineering toolkit) breaking in the new 2020 rolling [Kali Linux](https://www.kali.org/) security distro. It seems to be a fairly [well known issue](https://github.com/trustedsec/social-engineer-toolkit/issues/772) that no one has fixed in months (in the distro repos), even though it seems [the new version of SET]() has already addressesd  this.
 
