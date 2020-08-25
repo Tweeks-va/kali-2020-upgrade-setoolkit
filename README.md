@@ -12,7 +12,7 @@ Several of the older underlying setoolkit libraries in Kali Linux 2020 rely on p
 
 This Kali issue has [been submitted here](https://bugs.kali.org/view.php?id=6681).
 
-## Manually Doing the Upgade ##
+## Manually Stepping Through the Upgade ##
 
 I felt the need to write an installer, as many of the more inexperienced Linux users (e.g. high school students) and even teachers on the Cyber Range, are not super familiar with python, much less pip and git.  
 
