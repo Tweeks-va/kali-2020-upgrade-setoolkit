@@ -1,8 +1,8 @@
 # Kali 2020.02 Upgrade Script for setoolkit #
 
-In my work at the [VirginiaCyberRange](https://virginiacyberrange.org) I get to see a lot of weird stuff in our cloud based, security training system.. including problems our customers (cyber security instructors) run into doing pentesting classes and the like. One of the recent issues was this SET (social engineering toolkit) breaking in the new 2020 rolling [Kali Linux](https://www.kali.org/) security distro. It seems to be a fairly [well known issue](https://github.com/trustedsec/social-engineer-toolkit/issues/772) that no one has fixed in months (in the distro repos), even though it seems [the new version of SET]() has already addressesd  this.
+In my work at the [VirginiaCyberRange](https://virginiacyberrange.org) I get to see a lot of weird stuff in our cloud based, security training system.. including problems our customers (cyber security instructors) run into doing pentesting classes and the like. One of the recent issues was this SET (social engineering toolkit) breaking in the new 2020 rolling [Kali Linux](https://www.kali.org/) security distro. It seems to be a fairly [well known issue](https://github.com/trustedsec/social-engineer-toolkit/issues/772) that no one has fixed in months (in the distro repos), even though it seems [the new version of SET](https://github.com/trustedsec/social-engineer-toolkit/) has already addressesd  this.
 
-So here's a root shell script that carefully checks your Kali Linux install version (so "lbs_release -r" should = 2020.02), then prepares your system, pulls down the latest github version of setoolkit, sets up the needed python requirements, and does the pip3 install.  You'll know it worked if it ends in [OK], and once it is fixed the new setoolkit path, as returned bby "which setoolkit", will be /usr/local/bin/setoolkit (where the original broken program is at /usr/bin/setoolkit ).   
+So this root shell script (for beginners nor familiar with python, pip, git, etc) carefully checks your Kali Linux install version (so "lbs_release -r" should = 2020.02), prepares your system, pulls down the latest github version of setoolkit, sets up the needed python requirements, and does the pip3 install.  You'll know it worked if it ends in [OK], and once it is fixed the new setoolkit path, as returned bby "which setoolkit", will be /usr/local/bin/setoolkit (where the original broken program is at /usr/bin/setoolkit ).   
 
 ## The Nature of The Problem ##
 
@@ -10,7 +10,9 @@ Several of the older underlying setoolkit libraries in Kali Linux 2020 rely on p
 
 ![Alt Crashing google credential harvester](https://user-images.githubusercontent.com/1731305/90028387-9e22d500-dc87-11ea-81f8-55f278f85528.png "Crashing google credential harvester")
 
-## Doing the Upgade ##
+This Kali issue has [been submitted here](https://bugs.kali.org/view.php?id=6681).
+
+## Manually Doing the Upgade ##
 
 I felt the need to write an installer, as many of the more inexperienced Linux users (e.g. high school students) and even teachers on the Cyber Range, are not super familiar with python, much less pip and git.  
 
